@@ -1,0 +1,88 @@
+body{
+	background-image: url("../images/bg.jpg");
+}
+
+label, h2, h3{
+	font-family: "Open Sans Condensed";
+}
+
+.container{
+	width: 700px;
+	margin: 50px auto;
+}
+
+.container input{
+	height: 32px;
+	visibility: hidden;
+}
+
+.container label{
+	float: left;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	font-size: 1em;
+	text-transform: uppercase;
+	background: #5ba4a4;
+	background: -moz-linear-gradient(top, #5ba4a4 0%, #4e8c8a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5ba4a4), color-stop(100%,#4e8c8a));
+	background: -webkit-linear-gradient(top, #5ba4a4 0%,#4e8c8a 100%);
+	background: -o-linear-gradient(top, #5ba4a4 0%,#4e8c8a 100%);
+	background: -ms-linear-gradient(top, #5ba4a4 0%,#4e8c8a 100%);
+	background: linear-gradient(top, #5ba4a4 0%,#4e8c8a 100%);
+	height: 40px;
+	color: #385c5b;
+	padding: 0% 5%;
+	line-height: 40px;
+	font-weight: 800;
+	border-radius: 5px 5px 0 0;
+}
+
+.container input:hover + label{
+	background: #5ba4a4;
+}
+
+.container input:checked + label{
+	background: #fff;  /* Fondo de las pestañas al presionar */
+	color: #; /* Color de las pestañas al presionar */
+	z-index: 1;
+	line-height: 40px;
+	height: 40px;
+	position: relative;
+	color: #385c5b;
+	font-weight: 700;
+}
+
+.content div {
+	position: absolute;
+	z-index: -100;
+	opacity: 0;
+	transition: all linear 0.1s;
+	width: 600px;
+	background-color: #fff;
+    padding: 1% 3%;
+}
+
+.container input.tab-selec-1:checked ~ .content .content-1,
+.container input.tab-selec-2:checked ~ .content .content-2,
+.container input.tab-selec-3:checked ~ .content .content-3,
+.container input.tab-selec-4:checked ~ .content .content-4 {
+ 	padding: 
+    z-index: 100;
+    opacity: 1;
+    -webkit-transition: all ease-out 0.2s 0.1s;
+-moz-transition: all ease-out 0.2s 0.1s;
+-o-transition: all ease-out 0.2s 0.1s;
+-ms-transition: all ease-out 0.2s 0.1s;
+}
+
+h2,h3{
+	color: #398080;
+}
+
+p{
+	color: lightgray;
+	font-style: italic;
+	border-left: 8px solid #ECF5F5;
+	padding-left: 2%;
+}
